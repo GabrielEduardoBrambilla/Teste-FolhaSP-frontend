@@ -155,6 +155,9 @@ nav {
     width: 100%;
   }
 }
+.add-2 {
+  display: none;
+}
 
 @media screen and (min-width: 515px) {
   .grid {
@@ -202,6 +205,78 @@ nav {
     > h3 {
       grid-column: 1 / span 2;
     }
+  }
+  .related-news {
+    display: grid;
+    grid-column: 1 / span;
+    // grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px 10vw;
+  }
+  .carrousel {
+    grid-column: 1 / -1;
+
+    .card-type-1 {
+      position: relative;
+      box-shadow: -10px 10px 15px -10px rgba(0, 0, 0, 0.4);
+      > img {
+        object-fit: cover;
+        width: 100%;
+      }
+      .title-t1 {
+        bottom: 8%;
+        color: white;
+        font-size: 24px;
+        position: absolute;
+        padding: 2% 5%;
+      }
+      .semi-title {
+        position: absolute;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 10px;
+        top: 68%;
+        color: white;
+        margin: 0 5%;
+        background-color: rgba(23, 124, 239, 0.82);
+        width: 35%;
+      }
+    }
+  }
+  .culture-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: 1 / span 3;
+
+    > h3 {
+      grid-column: 1 / span 3;
+    }
+  }
+  .recent-news {
+    display: grid;
+    grid-column: 1 / span 2;
+    grid-template-columns: repeat(2, 1fr);
+    > h3 {
+      grid-column: 1 / span 2;
+    }
+  }
+  .add-2 {
+    display: block;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: right;
+    margin: auto;
+    > img {
+      width: 100%;
+    }
+  }
+  .add {
+    display: none;
   }
   .related-news {
     display: grid;
