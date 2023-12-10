@@ -224,7 +224,7 @@ nav .logo {
 @media screen and (min-width: 1000px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
-    margin: 20px 10vw;
+    margin: 20px 11vw;
   }
   .carrousel {
     grid-column: 1/-1;
