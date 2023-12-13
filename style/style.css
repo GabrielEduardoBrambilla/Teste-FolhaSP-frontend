@@ -3,37 +3,69 @@
   padding: 0;
 }
 
-img {
-  width: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 body {
   color: rgb(19, 19, 19);
   background: #e5e5e5;
   font-family: "Helvetica", sans-serif;
 }
 
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: whitesmoke;
+  font-weight: bold;
+  height: 40px;
+  gap: 1rem;
+  padding: 3% 1% 2% 1%;
+  background-color: rgb(0, 85, 255);
+  margin: 50px 0 0 0;
+}
+footer .back-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+footer .back-button > p {
+  cursor: pointer;
+}
+footer .back-button .arrow {
+  cursor: pointer;
+}
+footer .f_logo {
+  justify-self: flex-start;
+}
+
 nav {
   display: flex;
-  width: 100vw;
+  width: 100%;
   align-items: center;
-  justify-content: space-evenly;
   height: 80px;
   background-color: rgb(0, 85, 255);
+  position: relative;
 }
-nav > img {
+nav .menu {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
+  padding: 0 0 0 12px;
 }
 nav .logo {
-  width: 100px;
-  height: 100px;
+  display: flex;
+  width: 150px;
+  height: 80px;
   -o-object-fit: contain;
      object-fit: contain;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+nav .logo > p {
+  display: none;
+}
+nav .socials {
+  display: none;
 }
 
 .grid {
@@ -173,6 +205,35 @@ nav .logo {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+  }
+  nav .logo {
+    width: 100%;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+  }
+  nav .logo > p {
+    align-self: flex-end;
+    color: whitesmoke;
+    font-weight: 500;
+    display: block;
+    margin: 2% 0;
+  }
+  nav .socials {
+    display: flex;
+    width: 25px;
+    height: 30px;
+    grid-column: 3;
+  }
+  nav .socials > img {
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0 20%;
+  }
   .carrousel {
     grid-column: 1/-1;
   }
@@ -208,6 +269,9 @@ nav .logo {
     grid-template-columns: repeat(3, 1fr);
     grid-column: 1/span 2;
   }
+  .culture-cards > h3 {
+    display: none;
+  }
   .recent-news {
     display: grid;
     grid-column: 1/span 2;
@@ -225,6 +289,12 @@ nav .logo {
   .grid {
     grid-template-columns: repeat(3, 1fr);
     margin: 20px 11vw;
+  }
+  nav .menu {
+    padding: 0px 8vw;
+  }
+  nav .socials {
+    margin: 0px 11vw 0 0;
   }
   .carrousel {
     grid-column: 1/-1;
